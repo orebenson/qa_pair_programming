@@ -4,16 +4,23 @@ import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        // Create instances of Person
+        Person person1 = new Person("John", "Doe", LocalDate.of(1990, 1, 1));
+        Person person2 = new Person("Jane", "Smith", LocalDate.of(1985, 5, 15));
+        Person person3 = new Person("Alice", "Johnson", LocalDate.of(2000, 12, 25));
 
-        People allPeople = new People();
+        // Create an instance of People and add Person instances to it
+        People people = new People();
+        people.addPerson(person1);
+        people.addPerson(person2);
+        people.addPerson(person3);
 
-        Person person1 = new Person("Jack", "Benton", LocalDate.of(2017, 1, 13));
+        // Display the number of people
+        System.out.println("Number of people: " + people.getNumOfPeople());
 
-        allPeople.addPerson(person1);
-
-        System.out.println(allPeople.getNumOfPeople());
-
-
+        // Display the details of each person
+        for (Person person : people.getPeople()) {
+            System.out.println(person);
+        }
     }
 }
