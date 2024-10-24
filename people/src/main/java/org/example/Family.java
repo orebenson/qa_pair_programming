@@ -1,17 +1,19 @@
-package org;
+package org.example;
+
+import org.example.Person;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Family {
 
-    private List<People> familyList;
+    private List<Person> familyList;
 
     public Family() {
         this.familyList = new ArrayList<>();
     }
 
-    public void addMember(People person) {
+    public void addMember(Person person) {
         familyList.add(person);
     }
 
@@ -19,12 +21,12 @@ public class Family {
         return familyList.removeIf(person -> person.getName().equals(name));
     }
 
-    public List<People> getFamilyMembers() {
+    public List<Person> getFamilyMembers() {
         return new ArrayList<>(familyList);
     }
 
-    public People findMember(String name) {
-        for (People person : familyList) {
+    public Person findMember(String name) {
+        for (Person person : familyList) {
             if (person.getName().equals(name)) {
                 return person;
             }

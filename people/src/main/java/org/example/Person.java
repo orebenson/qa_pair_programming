@@ -29,6 +29,10 @@ public class Person {
         this.lastName = lastName;
     }
 
+    public String getName() {
+        return this.firstName + " " + this.lastName;
+    }
+
     public LocalDate getDateOfBirth() {
         return this.dateOfBirth;
     }
