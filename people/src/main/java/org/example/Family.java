@@ -39,7 +39,7 @@ public class Family {
 
     public String toString() {
         StringBuilder sb = new StringBuilder("Family Members:\n");
-        for (People person : familyList) {
+        for (Person person : familyList) {
             sb.append(person).append("\n");
         }
         return sb.toString();
