@@ -19,6 +19,10 @@ public class Family {
         return familyList.removeIf(person -> person.getName().equals(name));
     }
 
+    public int countMembers() {
+        return familyList.size();
+    }
+
     public List<People> getFamilyMembers() {
         return new ArrayList<>(familyList);
     }
@@ -30,5 +34,13 @@ public class Family {
             }
         }
         return null;
+    }
+
+    public String toString() {
+        StringBuilder sb = new StringBuilder("Family Members:\n");
+        for (People person : familyList) {
+            sb.append(person).append("\n");
+        }
+        return sb.toString();
     }
 }
